@@ -17,7 +17,9 @@ function moreTrees(){
 
 The function will hide the contents in the pargraph with the id of `less`.*/
 
-
+function lessContent(){
+    less.style.display = 'none';
+}
 
 //3. Edward (エドワード)
 /*Create a function named `bling` that will change the text in the paragraph of `worm` after hovering over it. Use the style guide below.
@@ -29,14 +31,28 @@ border: 3px dotted rosybrown
 padding: 10px
 */
 
+function bling(){
+    worm.style.fontSize = '28px';
+    worm.style.color = '#33cc33';
+    worm.style.border = '3px dotted rosybrown';
+    worm.style.padding = '10px';
+} 
 
+//How am I supposed to figure out the correct syntax, much less 'fontSize' and 'color' vs 'font-size' and 'font-color'? Where did we learn that?
 
 //4. Beet Cakes by Dre
 /*Add an event listener to the `recipe` button that will display the missing ingredient in the paragraph of `ingredient` after clicking on the button*/
 
 var missing = "1 Big ol' beet";
 
+function missingIngredient(){
+    var mIng = document.createElement('li');
+    mIng.className = 'mix';
+    mIng.innerHTML = missing;
+    ingredient.appendChild(mIng);
+}
 
+recipe.addEventListener('click', missingIngredient);
 
 //5. Pug Life
 /*Add an event listener to the img element `puggy` that will rollover a new image after hovering over it.*/
